@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block c1 %}
+
+<div class="container">
+    <div class="jumbotron">
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            <h1 align="center">Are you sure to delete record ?</h1>
+            <input type="submit" value="YES" class="btn btn-success btn-lg">
+            <button class="btn btn-danger btn-lg"><a href="{% url 'profiledata' %}">No</a></button>
+
+
+        </form>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

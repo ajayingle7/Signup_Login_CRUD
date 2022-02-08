@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+
+{% block c1 %}
+<div class="container">
+
+    <div class="jumbotron">
+
+        <form method="post">
+            {% csrf_token %}
+
+
+
+            <label for="un">Username</label>
+            <input type="text" name="un" class="form-control">
+            <br>
+
+            <label for="pw">Password</label>
+            <input type="password" name="pw" class="form-control">
+            <br>
+
+            <input type="submit" value="Login" class="btn btn-success btn-lg">
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block c1 %}
+
+<div class="container">
+    <div class="jumbotron">
+
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Profle Name</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mno</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in data %}
+    <tr>
+      <td>{{i.pid}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.email}}</td>
+              <td>{{i.mno}}</td>
+        <td><button class="btn btn-dark btn-lg"><a href="{% url 'update' i.pid %}">Update</a></button></td>
+                <td><button class="btn btn-dark btn-lg"><a href="{% url 'delete' i.pid %}">Delete</a></button></td>
+
+
+
+    </tr>
+
+            {% endfor %}
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}
